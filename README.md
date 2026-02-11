@@ -1,2 +1,40 @@
-# kanbanix-board-frontend
-Kanban board microfrontend for Kanbanix built with React and Module Federation. Provides drag and drop board management, column organization, and real time task updates. Deployed as a static site to AWS S3 and delivered via CloudFront.
+# Kanbanix Board Frontend
+
+Kanbanix Board Frontend is a microfrontend responsible for board and column management.
+
+It is independently deployable and integrated into the Kanbanix Shell using Webpack Module Federation.
+
+## Features
+
+- Create, update, delete boards
+- Create and manage columns
+- Drag and drop task movement
+- Real time board updates
+- API integration with Board Service and Task Service
+
+## Architecture
+
+Built with:
+
+- React
+- Webpack Module Federation
+- React DnD or similar drag and drop library
+- REST API integration
+
+## AWS Deployment (Always Free Tier)
+
+Frontend is deployed using:
+
+- Amazon S3 for static hosting
+- Amazon CloudFront for CDN delivery
+- GitHub Actions for CI/CD pipeline
+
+Each deployment publishes build artifacts to S3 and invalidates CloudFront cache.
+
+## Integration
+
+Loaded dynamically by:
+
+- kanbanix-shell-frontend
+
+This ensures independent scaling and deployment.
